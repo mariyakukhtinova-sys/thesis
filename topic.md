@@ -96,7 +96,7 @@ Elmarakeby H. A., Hwang J., Arafeh R. [et al.] Biologically informed deep neural
 
 ---
 
-## Альтернатива 4. Устойчивость к отсутствующим модальностям
+## Альтернатива 3. Устойчивость к отсутствующим модальностям
 
 **Тема:** «Сравнение устойчивости мультимодальных моделей к отсутствию биологических измерений при оценке когнитивных и моторных функций стареющих *Mus musculus* и *Acomys cahirinus*».
 
@@ -138,50 +138,8 @@ Wu R., Wang H., Chen H.-T., Carneiro G. Deep Multimodal Learning with Missing Mo
 
 **Зачем:** систематизация методов при пропущенных модальностях, архитектур и протоколов оценки устойчивости.
 
----
 
-## Multitask learning: предварительная проверка
-
-Связи когнитивных и моторных показателей после поправки на вид и возраст не подтверждены (все q ≥ 0,266; интервалы широкие).
-
-MTL против single-task остаётся возможным экспериментом, но гипотезу о преимуществе MTL пока обосновать нельзя; отрицательный перенос также не установлен.
-
-### Ключевые публикации
-
-#### Multimodal CustOmics
-
-Benkirane H., Vakalopoulou M., Planchard D. [et al.] Multimodal CustOmics: A unified and interpretable multi-task deep learning framework for multimodal integrative data analysis in oncology // PLOS Computational Biology. — 2025. — Vol. 21, № 6. — Art. e1013012. — DOI: 10.1371/journal.pcbi.1013012. — URL: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013012 (дата обращения: 30.10.2026).
-
-**Зачем:** близкая постановка: мультимодальная модель с несколькими задачами, гистологией и молекулярными данными, интерпретацией на уровне генов и путей.
-
-#### scMoMtF
-
-Lan W., Ling T., Chen Q. [et al.] scMoMtF: An interpretable multitask learning framework for single-cell multi-omics data analysis // PLOS Computational Biology. — 2024. — Vol. 20, № 12. — Art. e1012679. — DOI: 10.1371/journal.pcbi.1012679. — URL: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012679 (дата обращения: 30.10.2026).
-
-**Зачем:** показывает возможность совместить несколько задач и интерпретацию биологических признаков.
-
-**Ограничение:** задачи этой статьи (классификация клеток, снижение размерности, симуляция) не аналогичны совместному прогнозу Barnes/Rotarod.
-
-#### Gradient Surgery for Multi-Task Learning
-
-Yu T., Kumar S., Gupta A. [et al.] Gradient Surgery for Multi-Task Learning // Advances in Neural Information Processing Systems. — 2020. — Vol. 33. — P. 5824–5836. — URL: https://proceedings.neurips.cc/paper_files/paper/2020/hash/3fe78a8acf5fda99de95303940a2420c-Abstract.html (дата обращения: 30.10.2026).
-
-**Зачем:** обосновывает проблему конфликтов между задачами (negative transfer) и метод PCGrad.
-
-**Ограничение:** не доказывает преимущества MTL в данной выборке.
-
----
-
-# Оценка применимости направлений к выборке из 32 животных
-
-| Направление | Риск | Оценка |
-|---|---|---|
-| Fusion + XAI | Умеренный | Основной кандидат |
-| Biology-guided fusion | Умеренно высокий | Перспективно при подходящих омиксных данных |
-| Multitask learning | Высокий | Недостаточно оснований ожидать преимущество |
-| Missing-modality robustness | Низкий–умеренный | Технически наиболее предсказуемое направление |
-
-## Рекомендуемая комбинация
+## Основная рассматриваемая комбинация
 
 **Основное исследование:** сравнение early, intermediate и late fusion по качеству прогноза и стабильности интерпретации.
 
